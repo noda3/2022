@@ -89,9 +89,9 @@ class Net(nn.Module):
 
 # インスタンス化
 net_ori = Net()
-net = timm.create_model('efficientnetv2_rw_m',pretrained=True,num_classes=5,in_chans=1)
 net2 = timm.create_model('efficientnetv2_rw_m',pretrained=True,num_classes=5,in_chans=1)
-net3 = timm.create_model('efficientnetv2_rw_m',pretrained=True,num_classes=5,in_chans=1)
+net = timm.create_model('vit_base_patch16_224',pretrained=True,num_classes=5,in_chans=1,img_size=28)
+# net3 = timm.create_model('efficientnetv2_rw_m',pretrained=True,num_classes=5,in_chans=1)
 
 # 損失関数の設定
 criterion = nn.CrossEntropyLoss()
